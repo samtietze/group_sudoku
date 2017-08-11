@@ -43,6 +43,16 @@
       # the KEY address: its BOX address.
 
 #METHODS:
+
+  #Generate Hash
+    #Take in the string
+    #Create a KEY of the coordinates for that index in the string
+    #Assign the value (the number or dash) AT THAT string index to the KEY
+    #Feed it all into an array, which will be the game board
+        # Could stay a string; ARRAY.SPLIT can handle
+
+
+
   #Pretty Board!
     #INPUT: Hash VALUES
     #OUTPUT: Grid of integers
@@ -51,15 +61,48 @@
   #Solve
     #INPUT: String
     #OUTPUT: TBD, STRING probably
-    #This method requires calling the helper methods
-      # that we will create
+    #Should call the other methods and control the flow of the logic as it goes through the board.
+
 
   #Solved?
+    #INPUT: hash values string
+    #OUTPUT: BOOLEAN
     # Any string this checks will be a MUTATED STRING
-    # Create new string based on Solve method. Do not alter
+    # Create new string based on Solve method. (Take in a STRING of HASH VALUES.) Do not alter
       # the initial string.
-    #Boolean return based on whether the initial string has
+    #BOOLEAN return based on whether the initial string has
       # passed all tests and no more hyphens remain.
 
+  #Each TEST will require a method.
+    #INPUT: specific cell KEY
+    #OUTPUT: BOOLEAN?
+    #(Test row method, test column method, test box method)
+      #(All of these will probably use same logic):
+
+        #SEQUENCE
+        #Go to a CELL:
+          #Check each number for that box, and see if
+            #it conflicts.
+          #If there are multiple possible correct options,
+            #don't change anything and move on to the next
+            #box.
+          #If there is only one possible correct result:
+            #Change the VALUE of that KEY
+
+
+  #COMPARE TEST RESULTS
+    #INPUT: results of the three r/c/b tests
+    #OUTPUT: BOOLEAN
+    #Check if all the tests work for the same number
+      #Possibly it needs to check each number against all
+        #three results and then change the value based on
+        #whether this method returns true or not.
+
+  #CHANGE the number
+    #INPUT: key/value pair to be updated
+    #OUTPUT: updated key/value pair
+    #If all the checks come back true and ONLY ONE number is
+      #a possible solution
+        #Reassign the VALUE of that KEY
 
 
